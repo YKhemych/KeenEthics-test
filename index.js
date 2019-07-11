@@ -3,10 +3,7 @@ var Twitter = require('twitter-js-client').Twitter;
 
 const app = express();
 
-const port = process.env.PORT || 5000;
-
-app.listen(port, ()=> console.log(`Server has been started on ${port}`));
-
+app.use(express.static('client/build'))
 
 var config = {
     "consumerKey": "cbUDPoK69MOv6IzNK6IEK3FCh",
@@ -25,3 +22,17 @@ app.get('/:name', (req, res)=>{
             res.json(JSON.parse(data));
         });
 });
+
+
+if(process.env.NODE_ENV == 'production'){
+    const path = require('path');
+    app.get('/*', (req, res) =>{
+        res.sendfile(path.resolve(__dirname,'client','build','index.html'))
+    })
+}
+
+
+const port = process.env.PORT || 5000;
+
+app.listen(port, ()=> console.log(`Server has been started on ${port}`));
+
