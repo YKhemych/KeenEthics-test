@@ -1,0 +1,50 @@
+.app {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1DA1F2;
+    flex-direction: column;
+}
+
+.input {
+    border: 2px solid #f8f8f8;
+    border-radius: 5px;
+    padding: 0 5px;
+    font-size: 20px;
+}
+
+.button{
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid #f8f8f8;
+    background-color: white;
+}
+
+.tweet_div {
+    width: 600px;
+    padding: 0 20px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    margin: 10px 10px
+}
+
+.tweets_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

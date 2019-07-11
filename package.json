@@ -1,0 +1,24 @@
+{
+  "name": "keenethics-test",
+  "version": "1.0.0",
+  "description": "Get twitter timeline by screen name of the user",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Yosyp Khemych",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.1",
+    "express": "^4.17.1",
+    "twitter-js-client": "0.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
